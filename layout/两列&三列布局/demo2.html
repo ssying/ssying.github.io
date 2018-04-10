@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 不限制DOM书写顺序，先写主面板会使主面板部分优先渲染 -->
+	<!-- 缺点：如果中间栏含有最小宽度限制，或是含有宽度的内部元素，则浏览器窗口小到一定程度，主面板与侧栏会发生重叠。所以，中间栏最好不要设置宽度！ -->
+	<title>position+margin</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../CSSreset.css">
+</head>
+<body>
+<style type="text/css">
+	.right-bar{
+		position:absolute;
+		right:0;
+		top: 0;
+		width:200px;
+		background: #113285;
+	}
+	.left-bar{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width:200px;
+		background: #3A8FB7;
+	}
+	.main{
+		margin: 0 200px;
+		background: #7DB9DE;
+	}
+
+</style>
+<div class="wrap">
+	<div class="main">contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main content</div>
+	<div class="left-bar">I am left-bar</div>
+	<div class="right-bar">I am right-bar</div>
+</div>
+</body>
+</html>

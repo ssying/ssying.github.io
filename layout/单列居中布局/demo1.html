@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>头尾和主体内容一样宽且居中</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../CSSreset.css">
+</head>
+<body>
+<style type="text/css">
+	.wrap{
+		/*min-width宽度最小为900px*/
+		/*max-width宽度最大为900px*/
+		max-width:900px;
+		margin:0 auto;
+		background: #42602D;
+		height: auto;
+	}
+	/*当屏幕宽度小于900px时实现*/
+	@media (max-width:900px) {
+		/*解决右外边距失效问题，保证body的宽度>=.wrap的总宽*/
+		body{
+			min-width:1000px;
+		}
+		.wrap{
+			width:900px;
+			margin-right: 50px;
+			/*屏幕宽度小于900px时出现滚动条，但是外右边距的50px没有表现出来*/
+			/*因为当父元素水平空间不足，设置右外边距失效，优先保证左外边距*/  
+		}
+	}
+	header{
+		width:100%;
+		background: #86A697;
+		height: 150px;
+	}
+	.main{
+		width:100%;
+		background: #69B0AC;
+	}
+	footer{
+		width:100%;
+		background: #00AA90;
+		height: 150px;
+	}
+</style>
+<section class="wrap">
+	<header>I am header</header>
+	<section class="main">I am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main content</section>
+	<footer>I am footer</footer>
+</section>
+</body>
+</html>

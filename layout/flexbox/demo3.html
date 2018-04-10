@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 某个网格的宽度为固定的百分比，其余玩个平均分配剩余空间 -->
+	<title>百分比布局</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../CSSreset.css">
+</head>
+<body>
+<style type="text/css">
+	.wrap{
+		display: flex;
+		margin:10px auto;
+		padding:20px;
+		width:840px;
+		border:4px solid #666;
+		border-radius: .5em;
+		text-align: center;
+		flex-wrap: wrap;
+		color: #333;
+		font-family: "Segoe Script";
+		font-size:1em;
+		line-height: 2;
+	}
+	.column{
+		display: flex;
+		width:100%;
+		justify-content: space-between;
+	}
+	.grid{
+		background:#f1f1f1;
+		margin:5px;
+		padding: 5px;
+		flex: 1
+	}
+	/*设置某个网格占该行（或列）的百分比*/
+	.grid-1of2{
+		flex: 0 0 50%;
+	}
+	.grid-1of3{
+		flex: 0 0 40%;
+	}
+	.grid-3of4{
+		flex: 0 0 75%;
+	}
+</style>
+<div class="wrap">
+	<div class="column">
+		<div class="grid grid-3of4">3/4</div>
+		<div class="grid">remind 1/4</div>
+	</div>
+	<div class="column">
+		<div class="grid grid-1of3">2/5</div>
+		<div class="grid">remind 3/10</div>
+		<div class="grid">remind 3/10</div>
+	</div>
+	<div class="column">
+		<div class="grid grid-1of2">1/2</div>
+		<div class="grid">remind 1/6</div>
+		<div class="grid">remind 1/6</div>
+		<div class="grid">remind 1/6</div>
+	</div>
+</div>
+</body>
+</html>

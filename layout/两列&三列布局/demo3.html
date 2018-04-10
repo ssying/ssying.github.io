@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>圣杯布局(float+负margin)</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../CSSreset.css">
+</head>
+<body>
+<style type="text/css">
+	body{
+		min-width: 850px;
+		/*.main-width+.right-br-width+.left-bar-width*/
+	}
+	.wrap{
+		padding:0 200px;
+		/*.wrap-width = .main-width*/
+	}
+	.right-bar{
+		float: left;
+		position: relative;
+		right: -200px;
+		margin-left:-200px;
+		width:200px;
+		background: #113285;
+	}
+	.left-bar{
+		float: left;
+		position: relative;
+		left: -200px;
+		margin-left:-100%;
+		/*将它的外边距设置为 -100%，这样一来，由于浮动的关系，左侧栏就能上位，与中间栏交叠在一起，并占据了左边。*/
+
+		width:200px;
+		background: #3A8FB7;
+	}
+	.main{
+		float: left;
+		min-width:450px;
+		background: #7DB9DE;
+	}
+
+</style>
+<div class="wrap">
+	<div class="main">contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main content</div>
+	<div class="left-bar">I am left-bar</div>
+	<div class="right-bar">I am right-bar</div>
+</div>
+</body>
+</html>

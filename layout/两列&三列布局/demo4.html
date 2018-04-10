@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>双飞翼布局(float+负margin)</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../CSSreset.css">
+</head>
+<body>
+<style type="text/css">
+	body{
+		min-width: 850px;
+	}
+	.right-bar{
+		float: left;
+		margin-left:-200px;
+		width:200px;
+		background: #113285;
+	}
+	.left-bar{
+		float: left;
+		margin-left:-100%;
+		/*将它的外边距设置为 -100%，这样一来，由于浮动的关系，左侧栏就能上位，与中间栏交叠在一起，并占据了左边。*/
+		width:200px;
+		background: #3A8FB7;
+	}
+	/*在main元素上加了一层div, 并设置margin,由于两侧栏的负边距都是相对于main-wrap而言，main的margin值变化便不会影响两个侧栏，因此省掉了对两侧栏设置相对布局的步骤。*/
+	.main-wrap{
+		float: left;
+		width: 100%;
+	}
+	.main{
+		min-width: 450px;
+		margin: 0 200px;
+		background: #7DB9DE;
+	}
+
+</style>
+<div class="main-wrap">
+	<div class="main">contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main content</div>
+</div>
+<div class="left-bar">I am left-bar</div>
+<div class="right-bar">I am right-bar</div>
+</body>
+</html>

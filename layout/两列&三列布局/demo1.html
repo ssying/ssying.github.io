@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 这种布局方式比较简单明了，但缺点是渲染时先渲染了侧边栏，而不是比较重要的主面板。 -->
+	<title>float+margin</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../CSSreset.css">
+</head>
+<body>
+<style type="text/css">
+	.wrap{
+		min-width: 820px;
+	}
+	.right-bar{
+		float: right;
+		width:200px;
+		background: #113285;
+	}
+	.left-bar{
+		float: left;
+		width:200px;
+		background: #3A8FB7;
+	}
+	.main{
+		min-width: 450px;
+		margin:0 200px;
+		background: #7DB9DE;
+	}
+
+</style>
+<div class="wrap">
+	<div class="left-bar">I am left-bar</div>
+	<div class="right-bar">I am right-bar</div>
+	<div class="main">contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main contentI am main content</div>
+</div>
+</body>
+</html>
