@@ -28,13 +28,15 @@
 		display: flex;
 		flex:1;
 		font-size: 24px;
-		line-height: 300px;
 	}
 	/*.main-wrap中不能设置固定高度，否则footer不能自适应*/
 	.main-content{
 		background: #d6d6d6;
 		order: 1;
 		flex: 1;
+		height: calc(100vh - 200px);
+		/*将.wrap高度修改为100vh后，中间躯干三栏上方出现大片空白，不知道为啥。所以用calc计算视口的高度去除顶部和底部的高度，得到躯干的高度*/
+
 	}
 	.main-left-nav{
 		background: #77bbdd;
