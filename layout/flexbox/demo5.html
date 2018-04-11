@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表单控件</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../CSSreset.css">
+</head>
+<body>
+<style type="text/css">
+
+	.input-add-on {
+  		display: flex;
+  		margin:10px;
+		width:520px;
+	}
+
+	.input-add-on-field {
+  		flex: 1;
+	}
+	.input-add-on-item,.input-add-on-field,.input-add-on-item{
+		padding:10px;
+		box-sizing: border-box;
+		border:1px solid #efedea;
+		height:35px;
+		background: #f4f3f0;
+		color:#6a6a6a;
+		line-height: 15px;
+	}
+	.input-add-on-field{
+		background: #fff;
+		border-left: none;
+		border-right: none;
+	}
+	.input-add-on-item{
+		position: relative;
+	}
+
+</style>
+<div class="input-add-on">
+	<span class="input-add-on-item">Amount</span>
+	<input class="input-add-on-field">
+	<button class="input-add-on-item">Go</button>
+</div>
+
+</body>
+</html>

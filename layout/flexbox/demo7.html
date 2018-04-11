@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>悬挂式布局</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../CSSreset.css">
+</head>
+<body>
+<style type="text/css">
+	.wrap{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 5px auto;
+		border: 2px solid #ccc;
+		width: 720px;
+		color:#666;
+		font-size: 14px;
+	}
+	.title{
+		flex: 0 0 100%;
+		margin: 10px;
+		color:#333;
+	}
+	.grid-1of2{
+		flex: 0 0 50%;
+		margin: 0 20px;
+		box-sizing: border-box;
+		padding:10px;
+		height: 250px;
+		background: #f4f4f4;
+		border-radius: .3em;
+	}
+	@media (max-width: 768px) {
+		.wrap{
+			width:auto;
+			margin: 20px auto;
+		}
+		.grid-1of2{
+			height: auto;
+		}
+	}
+	.column-grid{
+		background: #f4f4f4;
+	}
+	.column-grid img{
+		padding: 0 10px 0 0;
+	}
+	.column{
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+	}
+	.column-grid{
+		flex: 1;
+		margin:0 0 10px 20px;
+		padding:10px;
+	}
+	.column-p{
+		display: flex;
+	}
+	.column-p-reverse{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.column-p-reverse img{
+		padding-left: 10px;
+	}
+	.column-p-grid{
+		flex: auto;
+	}
+	.column-p-grid .p-title{
+		display: inline-block;
+		margin-bottom:5px;
+	}
+	.column-foot{
+		display: flex;
+	}
+	.column-foot .column-foot-grid{
+		flex: 1;
+		background: #f4f4f4;
+		margin:20px;
+		padding: 10px
+	}
+	.column-foot .column-foot-grid:nth-child(1){
+		margin-right: 0;
+	}
+</style>
+
+<div class="wrap">
+	<h1 class="title">Basic Examples</h1>
+	<div class="column content">
+		<div class="column-grid">
+			<p class="column-p">
+				<img src="cat.jpg" width="100" height="100" class="column-p-grid">
+				<span class="column-p-grid">
+					<strong class="p-title">Stander Media Object</strong><br>
+					The domestic cat was first classified as Felis catus by Carl Linnaeus in the 10th edition of his Systema Naturae published in.Because of modern phylogenetics,
+				</span>
+			 </p>
+		</div>
+		<div class="column-grid">
+			<p class="column-p">
+				<img src="cat.jpg" width="100" height="100" class="column-p-grid">
+				<span class="column-p-grid">
+					<strong class="p-title">Stander Media Object</strong><br>
+					The domestic cat was first classified as Felis catus by Carl Linnaeus in the 10th edition of his Systema Naturae puatus by Carl Linnaeus tics,
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="grid-1of2">
+		<p class="column-p-reverse">
+			<img src="cat.jpg" width="100" height="100" class="column-p-grid">
+			<span class="column-p-grid">
+				<strong class="p-title">Stander Media Object</strong><br>
+				The domestic cat was first classified as Felis catus by Carl Linnaeus in the 10th edition of his Systema Naturae published in.Because of modern phylogenetics, s Felis catus by Carl Linnaeus in the 10th edition of his Systema Naturae published in.s Felis catus by Carl Linnaeus in the 10th 
+			</span>
+		</p>
+	</div>
+	<h1 class="title">Basic Examples</h1>
+	<div class="column-foot">
+		<span class="column-foot-grid">
+			The domestic cat was first classified as Felis catus by Carl Linnaeus in 
+		</span>
+		<span class="column-foot-grid">The domestic cat was first classified as Felis catus by Carl Linnaeus in the 10th edition of his Systema Naturae puatus by Carl Linnaeus in the 10th se of modern phylogenetics, 
+		</span>
+	</div>
+</div>
+</body>
+</html>
+<!-- 还是写得很乱啊。。。。。 -->

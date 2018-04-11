@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>圣杯布局</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../CSSreset.css">
+</head>
+<body>
+<style type="text/css">
+	.wrap{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 auto;
+		text-align: center;
+		color:#666;
+		font-family: 'Segoe Script';
+	}
+	header,footer{
+		flex:0 0 100%;
+		height: 100px;
+		background: #666;
+		color:#fff;
+		font-size: 24px;
+		line-height: 100px;
+	}
+	.main-wrap{
+		display: flex;
+		flex:1;
+		font-size: 24px;
+		line-height: 300px;
+	}
+	/*.main-wrap中不能设置固定高度，否则footer不能自适应*/
+	.main-content{
+		background: #d6d6d6;
+		order: 1;
+		flex: 1;
+	}
+	.main-left-nav{
+		background: #77bbdd;
+		order: 0;
+		flex:0 0 10em;
+	}
+	.main-right-nav{
+		background: #f63;
+		order: 2;
+		flex:0 0 10em;
+	}
+	/*如果是小屏幕，躯干的三栏自动变为垂直叠加*/
+	@media (max-width: 768px) {
+		.main-wrap{
+			flex-direction: column;
+			flex: 1;
+		}
+		.main-content,
+		.main-left-nav,
+		.main-right-nav{
+			flex: auto;
+		}
+	}
+</style>
+<div class="wrap">
+	<header>this is a header</header>
+	<section class="main-wrap">
+		<section class="main-content">main-content</section>
+		<section class="main-left-nav">main-left-nav</section>
+		<section class="main-right-nav">main-right-nav</section>
+	</section>
+	<footer>this is a footer</footer>
+</div>
+</body>
+</html>
